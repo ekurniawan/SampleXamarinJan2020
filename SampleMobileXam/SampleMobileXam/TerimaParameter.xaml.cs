@@ -10,14 +10,18 @@ using Xamarin.Forms.Xaml;
 namespace SampleMobileXam
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MyTabbedPage : TabbedPage
+    public partial class TerimaParameter : ContentPage
     {
-        public MyTabbedPage()
+        public TerimaParameter()
         {
             InitializeComponent();
-            Title = "Erick Kurniawan";
-            Children.Add(new SampleList());
-            Children.Add(new SampleGridLayout());
+        }
+
+        public TerimaParameter(double bil1,double bil2)
+        {
+            InitializeComponent();
+            lblBil1.Text = bil1.ToString();
+            lblBil2.Text = bil2.ToString();
         }
     }
 }

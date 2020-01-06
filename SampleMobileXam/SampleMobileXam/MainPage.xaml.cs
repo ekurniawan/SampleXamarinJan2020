@@ -42,5 +42,20 @@ namespace SampleMobileXam
         {
             await Navigation.PushAsync(new MyTabbedPage());
         }
+
+        private async void btnDisplayAlert_Clicked(object sender, EventArgs e)
+        {
+            var action = await DisplayActionSheet("ActionSheet: SavePhoto?",
+"Cancel", "Delete", "Photo Roll", "Email");
+            await DisplayAlert("Keterangan", $"Anda memilih {action}", "OK");
+        }
+
+        private async void btnKirimParam_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TerimaParameter(
+                Convert.ToDouble(txtBil1.Text),
+                Convert.ToDouble(txtBil2.Text)));
+        }
     }
+
 }

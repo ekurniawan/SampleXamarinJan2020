@@ -25,8 +25,11 @@
             <Button x:Name="btnAdd" Text="Add" Clicked="btnAdd_Clicked" />
             <Button x:Name="btnGrid" Text="Grid Page" />
             <Button x:Name="btnList" Text="List Page" />
+            <Button x:Name="btnDisplayAlert" Text="Display Alert" Clicked="btnDisplayAlert_Clicked" />
         </StackLayout>
-        
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnKirimParam" Text="Kirim Parameter" Clicked="btnKirimParam_Clicked" />
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
