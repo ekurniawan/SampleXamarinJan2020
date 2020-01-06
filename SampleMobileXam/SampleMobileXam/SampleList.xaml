@@ -7,7 +7,14 @@
              x:Class="SampleMobileXam.SampleList">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lvSample" />
+            <ListView x:Name="lvSample" ItemTapped="lvSample_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Username}"  
+                                  Detail="{Binding Pesan}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

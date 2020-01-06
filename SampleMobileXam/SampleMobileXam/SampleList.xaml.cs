@@ -9,6 +9,13 @@ using Xamarin.Forms.Xaml;
 
 namespace SampleMobileXam
 {
+    public class ListItem
+    {
+        public string Username { get; set; }
+        public string Pesan { get; set; }
+    }
+
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SampleList : ContentPage
     {
@@ -16,14 +23,21 @@ namespace SampleMobileXam
         {
             InitializeComponent();
 
-            List<string> lstNama = new List<string>
+            List<ListItem> lstItem = new List<ListItem>
             {
-                "Erick",
-                "Budi",
-                "Bambang",
-                "Siti"
+                new ListItem { Username="Erick",Pesan="Belajar Xamarin" },
+                new ListItem { Username="Budi",Pesan="Belajar Xamarin Android" },
+                new ListItem { Username="Bambang",Pesan="Belajar Xamarin IOS" },
             };
-            lvSample.ItemsSource = lstNama;
+           
+            lvSample.ItemsSource = lstItem;
+        }
+
+        private void lvSample_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            //string nama = (string)e.Item;
+            //DisplayAlert("Keterangan", $"Nama yang dipilih: {nama}", "OK");
+            //((ListView)sender).SelectedItem = null;
         }
     }
 }
