@@ -56,6 +56,11 @@ namespace SampleMobileXam
                 Convert.ToDouble(txtBil1.Text),
                 Convert.ToDouble(txtBil2.Text)));
         }
+
+        private async void btnAppCurrent_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SampleApplicationCurrent());
+        }
     }
 
 }

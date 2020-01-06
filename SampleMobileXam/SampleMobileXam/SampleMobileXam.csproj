@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -11,12 +11,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Plugin.NetStandardStorage" Version="1.0.7" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="MyTabbedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SampleApplicationCurrent.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="SampleGridLayout.xaml">

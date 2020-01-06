@@ -29,6 +29,7 @@
         </StackLayout>
         <StackLayout Orientation="Horizontal">
             <Button x:Name="btnKirimParam" Text="Kirim Parameter" Clicked="btnKirimParam_Clicked" />
+            <Button x:Name="btnAppCurrent" Text="App Current" Clicked="btnAppCurrent_Clicked" />
         </StackLayout>
     </StackLayout>
 
