@@ -84,7 +84,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_jam.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SampleMobileXam\SampleMobileXam.csproj">
       <Project>{9A954AF8-B3E9-4AED-8169-700BA9446C62}</Project>
