@@ -6,6 +6,12 @@
              mc:Ignorable="d" Title="Main Page"
              x:Class="SampleMobileXam.MainPage">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="menuGrid" Order="Secondary" Clicked="BtnGrid_Clicked" 
+                     Text="Menu Grid" />
+        <ToolbarItem x:Name="menuList" Order="Secondary" Clicked="BtnList_Clicked" 
+                     Text="Menu List" />
+    </ContentPage.ToolbarItems>
     <StackLayout>
         <!-- Place new controls here -->
         <Entry x:Name="txtBil1" Placeholder="Masukan Bilangan 1" 
