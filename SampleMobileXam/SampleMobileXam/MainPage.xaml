@@ -11,7 +11,7 @@
                      Text="Menu Grid" />
         <ToolbarItem x:Name="menuList" Order="Secondary" Clicked="BtnList_Clicked" 
                      Text="Menu List" />
-        <ToolbarItem x:Name="menuJam" Order="Primary"  
+        <ToolbarItem x:Name="menuJam" Order="Primary" Clicked="menuJam_Clicked"  
                      IconImageSource="ic_jam" />
     </ContentPage.ToolbarItems>
     <StackLayout>

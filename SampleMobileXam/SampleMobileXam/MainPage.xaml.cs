@@ -37,5 +37,10 @@ namespace SampleMobileXam
             double hasil = bil1 + bil2;
             txtHasil.Text = hasil.ToString();
         }
+
+        private async void menuJam_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MyTabbedPage());
+        }
     }
 }
