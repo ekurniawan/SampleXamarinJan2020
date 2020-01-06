@@ -11,6 +11,7 @@ namespace SampleMobileXam
 {
     public class ListItem
     {
+        public string Pic { get; set; }
         public string Username { get; set; }
         public string Pesan { get; set; }
     }
@@ -25,9 +26,9 @@ namespace SampleMobileXam
 
             List<ListItem> lstItem = new List<ListItem>
             {
-                new ListItem { Username="Erick",Pesan="Belajar Xamarin" },
-                new ListItem { Username="Budi",Pesan="Belajar Xamarin Android" },
-                new ListItem { Username="Bambang",Pesan="Belajar Xamarin IOS" },
+                new ListItem { Username="Erick",Pesan="Belajar Xamarin",Pic="monkey1.png" },
+                new ListItem { Username="Budi",Pesan="Belajar Xamarin Android",Pic="monkey2.jpg" },
+                new ListItem { Username="Bambang",Pesan="Belajar Xamarin IOS",Pic="monkey3.jpg" }
             };
            
             lvSample.ItemsSource = lstItem;
@@ -35,9 +36,9 @@ namespace SampleMobileXam
 
         private void lvSample_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            //string nama = (string)e.Item;
-            //DisplayAlert("Keterangan", $"Nama yang dipilih: {nama}", "OK");
-            //((ListView)sender).SelectedItem = null;
+            ListItem data = (ListItem)e.Item;
+            DisplayAlert("Keterangan", $"Username yang dipilih: {data.Username}", "OK");
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }

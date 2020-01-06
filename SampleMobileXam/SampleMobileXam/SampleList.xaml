@@ -10,7 +10,7 @@
             <ListView x:Name="lvSample" ItemTapped="lvSample_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Username}"  
+                        <ImageCell ImageSource="{Binding Pic}" Text="{Binding Username}"  
                                   Detail="{Binding Pesan}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
