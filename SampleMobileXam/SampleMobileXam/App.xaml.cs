@@ -6,6 +6,7 @@ namespace SampleMobileXam
 {
     public partial class App : Application
     {
+        //startup
         public App()
         {
             InitializeComponent();
