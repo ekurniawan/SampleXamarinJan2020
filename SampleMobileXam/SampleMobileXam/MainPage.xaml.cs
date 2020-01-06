@@ -16,12 +16,18 @@ namespace SampleMobileXam
         public MainPage()
         {
             InitializeComponent();
-            btnUpdate.Clicked += BtnUpdate_Clicked;
+            btnGrid.Clicked += BtnGrid_Clicked;
+            btnList.Clicked += BtnList_Clicked;
         }
 
-        private void BtnUpdate_Clicked(object sender, EventArgs e)
+        private async void BtnList_Clicked(object sender, EventArgs e)
         {
-            
+            await Navigation.PushAsync(new SampleList());
+        }
+
+        private async void BtnGrid_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SampleGridLayout());
         }
 
         private void btnAdd_Clicked(object sender, EventArgs e)

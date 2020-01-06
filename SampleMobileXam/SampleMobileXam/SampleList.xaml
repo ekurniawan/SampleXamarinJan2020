@@ -7,11 +7,29 @@
              x:Class="SampleMobileXam.SampleList">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lvSample" ItemTapped="lvSample_ItemTapped">
+            <ListView x:Name="lvSample"
+                      HasUnevenRows="True"
+                      ItemTapped="lvSample_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ImageCell ImageSource="{Binding Pic}" Text="{Binding Username}"  
-                                  Detail="{Binding Pesan}" />
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50" />
+                                    <RowDefinition Height="50" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding Pic}" WidthRequest="85"
+                                       Grid.Column="0" Grid.RowSpan="2" Grid.Row="0" />
+                                <Label Text="{Binding Username}" FontSize="Medium"
+                                       Grid.Row="0" Grid.Column="1" />
+                                <Label Text="{Binding Pesan}" TextColor="Red"
+                                       Grid.Row="1" Grid.Column="1" />
+                            </Grid>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
