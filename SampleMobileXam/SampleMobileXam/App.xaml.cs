@@ -11,7 +11,7 @@ namespace SampleMobileXam
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new BranchPage());
         }
 
         protected override void OnStart()
