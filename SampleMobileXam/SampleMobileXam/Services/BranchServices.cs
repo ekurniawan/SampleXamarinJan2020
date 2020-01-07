@@ -29,8 +29,8 @@ namespace SampleMobileXam.Services
                 {
                     var content = await response.Content.ReadAsStringAsync();
                     var results =
-                        JsonConvert.DeserializeObject<BranchStatus>(content);
-                    lstBranch = results.result;
+                        Unwrapper.Unwrap<List<Branch>>(content);
+                    lstBranch = results;
                 }
                 else
                 {
